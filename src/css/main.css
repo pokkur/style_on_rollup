@@ -1,0 +1,25 @@
+:root {
+  --gothic: sans-serif;
+}
+
+$base: rebeccapurple;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--gothic);
+  font-size: 62.5%;
+
+  > .main-content {
+    position: relative;
+  }
+}
+
+.popup {
+  background: $base;
+  size: 300px 50px;
+}
