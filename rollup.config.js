@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import precss from 'precss';
 import cssnext from 'postcss-cssnext';
@@ -12,6 +13,9 @@ export default {
   format: 'iife',
   plugins: [
     postcss({
+      extensions: ['.css', '.sss'],
+      extract: './dist/css/main.css',
+      sourceMap: true,
       plugins: [
         precss(),
         cssnext({
@@ -22,6 +26,13 @@ export default {
         rucksack(),
         lost(),
       ],
-    })
+    }),
+    commonjs(),
+    babel({
+      babelrc: false,
+      presets: ['es2015-rollup'],
+      include: '**/*.js',
+      sourceMap: true
+    }),
   ],
 };

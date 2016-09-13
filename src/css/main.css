@@ -10,6 +10,12 @@ $base: rebeccapurple;
   box-sizing: border-box;
 }
 
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
 body {
   font-family: var(--gothic);
   font-size: 62.5%;
