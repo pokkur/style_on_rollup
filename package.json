@@ -7,9 +7,16 @@
     "watch": "rollup -c --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pokkur/style_on_rollup.git"
+  },
   "author": "Pokkur",
-  "license": "",
+  "license": "MIT",
+  "engines": {
+    "npm": ">=3.9.0",
+    "node": ">=5.11.1"
+  },
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "lost": "^7.1.0",
@@ -20,9 +27,12 @@
     "rollup": "^0.35.9",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-riot": "^0.4.2",
+    "rollup-plugin-stylus-css-modules": "^1.2.1",
     "rollup-watch": "^2.5.0",
     "rucksack-css": "^0.8.6"
   },
   "dependencies": {
+    "debug": "^2.2.0"
   }
 }
